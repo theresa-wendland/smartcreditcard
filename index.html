@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" class="credit-card">
+        <div class="front">
+            <div class="card-data-row">
+                <div class="brand-name">RESA Bank</div>
+                <img data-logo src="/public/visa.svg" alt="" class="logo">
+            </div>
+            <fieldset class="form-group">
+                <legend>Card Number</legend>
+                <label for="cc-1"> Card Number</label>
+                <div data-connected-inputs class="cc-inputs horizantal-input">
+                    <input type="tel" maxlength="4", aria-label="Credit Card First 4 Digits" id="cc-1" required pattern="[0-9]{4}">
+                    <input type="tel" maxlength="4", aria-label="Credit Card Second 4 Digits" required pattern="[0-9]{4}">
+                    <input type="tel" maxlength="4", aria-label="Credit Card Third 4 Digits" required pattern="[0-9]{4}">
+                    <input type="tel" maxlength="4", aria-label="Credit Card Last 4 Digits" required pattern="[0-9]{4}">
+                </div>
+            </fieldset>
+            <div class="input-row">
+                <div class="form-group name-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <fieldset class="form-group">
+                    <legend>Expiration</legend>
+                    <label for="expiration-month">Expiration</label>
+                    <div class="horizantal-input">
+                        <select id="expiration-month" aria-label="expiration-month" required>
+                            <option value="">01</option>
+                            <option value="">02</option>
+                            <option value="">03</option>
+                            <option value="">04</option>
+                            <option value="">05</option>
+                            <option value="">06</option>
+                            <option value="">07</option>
+                            <option value="">08</option>
+                            <option value="">09</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                        </select>
+                        <select id="expiration-year" aria-label="expiration-year" required data-expiration-year>
+                        </select>
+                    </div>
+
+                </fieldset>
+            </div>
+
+        </div>
+        <div class="back">
+            <div class="stripe"></div>
+            <div class="form-group cvc-group">
+                <label for="cvc">CVC</label>
+                <input class="cvc-input" type="tel" maxlength="3" id="cvc"  required/>
+            </div>
+
+        </div>
+
+    </form>
+    
+</body>
+</html>
